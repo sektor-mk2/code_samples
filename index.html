@@ -1,0 +1,422 @@
+<!-- standard beginning -->
+<!DOCTYPE html>
+<!-- use lowercase tags
+
+Core attr-s - Id, Title, Class, Style
+Style carries css
+
+Internationalization attr-s - dir, lang (older), xml:lang (newer) - all can be in html tag
+
+Other attr-s - align (can be - right, left, center), valign (can be - top, middle, bottom), bgcolor, background, width, height
+
+js in <script> and css in <style> tags should be in comments
+
+tables can be nested
+
+Entity = reserved character
+
+Background can be color - bgcolor attr, or image - background attr
+
+Color can be hex or "rgb(0,0,120)"
+
+CHEATSHEET
+Refs:
+https://www.tutorialspoint.com/html/index.htm
+https://digital.com/tools/html-cheatsheet/
+https://www.tutorialspoint.com/css/css_references.htm
+
+In forms attribute is event, value is script function
+
+Layout 1 - with tables
+Layout 2 - with css, divs, spans
+-->
+<html>
+   <head>
+      <title>title</title>
+      <!-- attributes of meta tag carry info , optional, used by crawlers -->
+      <meta name = "keywords" content = "HTML, Meta Tags, Metadata" />
+      <meta name = "description" content = "Learning about Meta Tags." />
+      <meta name = "revised" content = "Nikola, 1/1/2023" />
+      <meta name = "author" content = "Nikola Shekerev" />
+
+      <!-- auto refresh in sec, redirect-->
+      <meta http-equiv = "refresh" content = "300; url = http://www.tutorialspoint.com" />
+
+      <!-- set cookie, without expiration, it is just a session cookie -->
+      <meta http-equiv = "cookie" content = "userid = xyz; expires = Wednesday, 08-Aug-15 23:59:59 GMT;" />
+
+      <!-- default charset is ISO-8859-1, this is how to change -->
+      <meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8" />
+      <meta http-equiv = "expires" content = "Wed, 21 June 2206 14:25:27 GMT">
+      <meta name = "robots" content = "noindex, nofollow">
+      <meta http-equiv = "Content-Script-Type" content = "text/JavaScript" />
+
+      <!-- base href
+      <base href = "https://www.tutorialspoint.com/">
+      -->
+      <style>
+      h1 {
+         color: #36CFFF;
+      }
+      </style>
+
+      <!-- like import for css
+      <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+      -->
+
+      <!-- like import for js
+      <script type = "text/JavaScript">
+         function Hello() {
+            alert("Hello, World");
+         }
+      </script>
+      <script src = "/html/script.js" type = "text/javascript"/></script>
+      -->
+      <noscript>Your browser does not support JavaScript!</noscript>
+
+   </head>	
+   <body alink = "#54A250" link = "#040404" vlink = "#F40633">
+      <basefont face = "arial, verdana, sans-serif" size = "3">
+      <a href = "#bottom">Link to Bottom</a>
+
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <p>paragraph</p>
+      <p>paragraph with <br /> line break</p>
+      <center>
+         <p>centered</p>
+      </center>
+      <p>above horizontal line</p>
+      <hr />
+      <p>below horizontal line</p>
+      <pre>
+         function tag_for_preserve_format( strText ){
+            alert (strText)
+         }
+      </pre>
+      <p>non breaking character - "12&nbsp;Angry&nbsp;Men."</p>
+      <i>italic</i>
+      <u>underlined</u>
+      <b>bold</b>
+      <strike>strike</strike>
+      <tt>monospaced</tt>
+      <sup>superscript</sup>
+      <sub>subscript</sub>
+      <del>deleted</del>
+      <ins>inserted</ins>
+      <big>big</big>
+      <small>small</small>
+      <em>emphasized</em>
+      <mark>marked</mark>
+      <strong>strong</strong>
+      <abbr title="abbreviation">abbr</abbr>
+      <acronym>acronym</acronym>
+      <dfn>definition element</dfn>
+      <p align = "left">This is left aligned</p>
+      <p align = "center">This is center aligned</p>
+      <p align = "right">This is right aligned</p>
+      <h3 title = "title example">title attribute is often tooltip or loading placeholder</h3>
+      <p dir = "rtl">dir with rtl</p>
+      <p dir = "ltr">dir with ltr</p>
+      <bdo dir = "rtl">bi directional override rtl</bdo>
+      <p>Example of <blockquote>block quote</blockquote></p>
+      <p>Example of <q>double quote</q></p>
+      <p>Example of <cite>citation quote</cite></p>
+      <p>Example of <code>programming code sample with <var>variable</var></code></p>
+      <p>Example of <kbd>keyboard input</kbd></p>
+      <p>Example of <samp>sample output</samp></p>
+      <address>388A, Road No 22, Jubilee Hills -  Hyderabad</address>
+
+      <!-- attributes - border, align, width, height -->
+      <img src = "img/logo.jpg" alt = "img description"/>
+
+      <table border = "1" cellpadding = "5" cellspacing = "5" bordercolor = "yellow" bgcolor = "green">
+         <tr>
+            <th>Name</th>
+            <th>Salary</th>
+         </tr>
+         <tr>
+            <td>Ramesh Raman</td>
+            <td>5000</td>
+         </tr>
+
+         <tr>
+            <td>Shabbir Hussein</td>
+            <td>7000</td>
+         </tr>
+      </table>
+
+      <table border = "1" width = "400" height = "150" background = "img/logo.jpg">
+         <caption>This is the caption</caption>
+         <tr>
+            <th>Name</th>
+            <th>Salary</th>
+         </tr>
+         <tr>
+            <td>Ramesh Raman</td>
+            <td>5000</td>
+         </tr>
+
+         <tr>
+            <td>Shabbir Hussein</td>
+            <td>7000</td>
+         </tr>
+      </table>
+
+      <table border = "1">
+         <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+         </tr>
+         <tr>
+            <td rowspan = "2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+         </tr>
+         <tr>
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+         </tr>
+         <tr>
+            <td colspan = "3">Row 3 Cell 1</td>
+         </tr>
+      </table>
+
+      <table border = "1" width = "100%">
+         <thead>
+            <tr>
+               <td colspan = "4">This is the head of the table</td>
+            </tr>
+         </thead>
+
+         <tfoot>
+            <tr>
+               <td colspan = "4">This is the foot of the table</td>
+            </tr>
+         </tfoot>
+
+         <tbody>
+            <tr>
+               <td>Cell 1</td>
+               <td>Cell 2</td>
+               <td>Cell 3</td>
+               <td>Cell 4</td>
+            </tr>
+         </tbody>
+      </table>
+
+      <div style = "font-family:verdana;">This is demo for font family</div>
+      <br />
+      <div style = "font-size:120%;">This is demo for font size</div>
+      <br />
+      <div style = "font-size:14pt;">This is demo for font size</div>
+
+      <ul type = "square">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ul>
+
+      <ul type = "disc">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ul>
+
+      <ul type = "circle">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ul>
+
+      <ol type = "1" start = "4">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+
+      <ol type = "i" start = "4">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+
+      <ol type = "I" start = "4">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+
+      <ol type = "a" start = "4">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+
+      <ol type = "A" start = "4">
+         <li>Beetroot</li>
+         <li>Ginger</li>
+         <li>Potato</li>
+         <li>Radish</li>
+      </ol>
+
+      <dl>
+         <dt><b>HTML</b></dt>
+         <dd>This stands for Hyper Text Markup Language</dd>
+         <dt><b>HTTP</b></dt>
+         <dd>This stands for Hyper Text Transfer Protocol</dd>
+      </dl>
+
+      <!-- target may also be name of a frame -->
+      <a href = "https://www.tutorialspoint.com" target = "_blank">This is a link</a>
+      <p id="bottom">Anchor for link </p>
+      <a href = "https://www.tutorialspoint.com/page.pdf">Link to download file</a>
+      <br />
+
+      <a href = "https://www.tutorialspoint.com" target = "_self">
+         <img src = "img/logo.jpg" alt = "Img as link" border = "0"/>
+      </a>
+
+      <!-- call code with argument my_code?coord_x,coord_y -->
+      <a href = "some code address" target = "_self">
+         <img ismap src = "img/logo.jpg" alt = "Use img as map" border = "0"/>
+      </a>
+
+      <p>Image with hotspot links</p>
+      <img src = "img/logo.jpg" alt = "My map" border = "0" usemap = "#my_map"/>
+      <!-- Create  Mappings -->
+
+      <map name = "my_map">
+         <area shape = "circle" coords = "0,0,30"
+            href = "https://www.tutorialspoint.com" alt = "link 1" target = "_self" />
+
+         <area shape = "rect" coords = "30,0,60,60" alt = "link 2"
+            href = "https://www.facebook.com" target = "_self" />
+      </map>
+
+      <a href = "mailto:abc@example.com?subject = Feedback&body = Message">Send Email via Link</a>
+
+      <iframe src = "https://www.google.com/" width = "555" height = "200">
+         iframe Example
+      </iframe>
+
+      <br/>
+      <font size = "1">Font size = "1"</font><br />
+      <font size = "2">Font size = "2"</font><br />
+      <font size = "3">Font size = "3"</font><br />
+      <font size = "4">Font size = "4"</font><br />
+      <font size = "5">Font size = "5"</font><br />
+      <font size = "6">Font size = "6"</font><br />
+      <font size = "7">Font size = "7"</font><br />
+
+      <!-- Relative Font Sizes -->
+      <font size = "-1">Font size = "-1"</font><br />
+      <font size = "+1">Font size = "+1"</font><br />
+      <font size = "+2">Font size = "+2"</font><br />
+      <font size = "+3">Font size = "+3"</font><br />
+      <font size = "+4">Font size = "+4"</font><br />
+
+      <font face = "Times New Roman" size = "5">Times New Roman</font><br />
+      <font face = "Verdana" size = "5">Verdana</font><br />
+      <font face = "Comic sans MS" size =" 5">Comic Sans MS</font><br />
+      <font face = "WildWest" size = "5">WildWest</font><br />
+      <font face = "Bedrock" size = "5">Bedrock</font><br />
+      <font face = "Lucida Calligraphy,Comic Sans MS,Lucida Console">Specify Alternative Fonts</font><br />
+
+      <form >
+         First name: <input type = "text" name = "first_name" />
+         <br><br>
+         Last name: <input type = "text" name = "last_name" />
+      </form><br><br>
+
+      <form >
+         User ID : <input type = "text" name = "user_id" />
+         <br><br>
+         Password: <input type = "password" name = "password" />
+      </form><br><br>
+
+      <form>
+         Description : <br />
+         <textarea rows = "5" cols = "50" name = "description">
+            Enter description here...
+         </textarea>
+      </form><br>
+
+      <form>
+         <input type = "checkbox" name = "maths" value = "on"> Maths
+         <input type = "checkbox" name = "physics" value = "on"> Physics
+      </form><br>
+
+      <form>
+         <input type = "radio" name = "subject" value = "maths"> Maths
+         <input type = "radio" name = "subject" value = "physics"> Physics
+      </form><br>
+
+      <form>
+         <select name = "dropdown">
+            <option value = "Maths" selected>Maths</option>
+            <option value = "Physics">Physics</option>
+         </select>
+      </form><br>
+
+      <form>
+         <input type = "file" name = "fileupload" accept = "image/*" />
+      </form><br>
+
+      <form>
+         <input type = "submit" name = "submit" value = "Submit" />
+         <input type = "reset" name = "reset"  value = "Reset" />
+         <input type = "button" name = "ok" value = "OK" />
+         <input type = "image" name = "imagebutton" src = "img/logo.jpg" />
+      </form><br>
+
+      <form>
+         <p>Hidden form, carries data</p>
+         <input type = "hidden" name = "pagename" value = "10" />
+         <input type = "submit" name = "submit" value = "Submit" />
+         <input type = "reset" name = "reset"  value = "Reset" />
+      </form><br>
+
+      <embed src = "/html/some_media.mid" width = "100%" height = "60" >
+         <noembed>
+            <img src = "img/logo.jpg" alt = "If embed is not supported" >
+         </noembed>
+      </embed><br>
+
+      <!-- Generic Objects
+      <object data = "data/test.htm" type = "text/html" width = "300" height = "200">
+         alt : <a href = "data/test.htm">test.htm</a>
+      </object>
+
+      <object data = "data/test.pdf" type = "application/pdf" width = "300" height = "200">
+         alt : <a href = "data/test.pdf">test.htm</a>
+      </object>
+
+      <object data = "data/test.wav" type = "audio/x-wav" width = "200" height = "20">
+         <param name = "src" value = "data/test.wav">
+         <param name = "autoplay" value = "false">
+         <param name = "autoStart" value = "0">
+         alt : <a href = "data/test.wav">test.wav</a>
+      </object>
+      -->
+
+      <marquee>This is basic example of marquee</marquee>
+      <marquee width = "50%">This example will take only 50% width</marquee>
+      <marquee direction = "right">This text will scroll from left to right</marquee>
+      <marquee direction = "up">This text will scroll from bottom to up</marquee>
+
+
+   </body>
+</html>
